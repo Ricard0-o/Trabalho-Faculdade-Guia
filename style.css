@@ -12,8 +12,9 @@ a{color:var(--azul)}
 :focus-visible{outline:3px solid var(--dest);outline-offset:2px;border-radius:3px}
 
 /* topo + menu global */
-.topo{grid-area:topo;background:var(--azul-esc);color:#fff;padding:.5rem clamp(1rem,4vw,2rem) 0}
-.marca{margin:0;font-size:1.25rem;padding-top:.5rem}
+.topo{grid-area:topo;background:var(--azul-esc);color:#fff;padding:.75rem clamp(1rem,4vw,2rem) 0;display:flex;flex-direction:column;gap:.5rem}
+.identidade{display:flex;align-items:center}
+.marca{margin:0;font-size:1.25rem}
 .marca small{display:block;font-size:.85rem;font-weight:400;opacity:.9}
 .menu{display:flex;flex-wrap:wrap;gap:.25rem}
 .menu a{color:#fff;text-decoration:none;min-height:44px;min-width:44px;display:inline-flex;align-items:center;padding:0 .75rem;border-bottom:3px solid transparent}
@@ -66,8 +67,9 @@ a{color:var(--azul)}
 /* desenho novo (não é só quantidade): a lateral sobe para a coluna esquerda */
 @media (min-width:700px){
  body{grid-template-areas:"topo topo" "lado conteudo" "rodape rodape";grid-template-columns:200px minmax(0,1fr)}
- .topo{display:flex;justify-content:space-between;align-items:center;padding-bottom:0}
- .marca{padding:.5rem 0}
+ .topo{flex-direction:row;justify-content:space-between;align-items:center;gap:2rem;padding-top:.5rem}
+ .identidade{flex:0 0 auto;padding:.5rem 0}
+ .menu{justify-content:flex-end}
  .menu a{min-height:56px}
  .lado ul{flex-direction:column}
  .lado{padding-top:1.5rem}
